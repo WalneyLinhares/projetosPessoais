@@ -1,7 +1,7 @@
 let horas = document.getElementById('horas');
 let minutos = document.getElementById('minutos');
 let segundos = document.getElementById('segundos');
-let countstate = false; //teste
+let countstate = false;
 
 
 
