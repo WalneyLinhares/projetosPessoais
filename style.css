@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Tektur:wght@400..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: "Tektur", sans-serif;
+    background: linear-gradient(150deg, #6b0062, #682a00);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.painel {
+    background-color: transparent;
+    text-align: center;
+    height: 350px;
+    width: 500px;
+    padding: 20px;
+    padding-bottom: 55px;
+    border-radius: 15px;
+    border: #e7e7e7 solid;
+    box-shadow: 5px 5px 15px 1px #080000;
+}
+
+.painel h1 {
+    text-transform: uppercase;
+}
+
+.numeros {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin: 30px;
+    padding: 30px;
+    padding-bottom: 10px;
+}
+
+.numeros div {
+    /* background-color: #9c2c2c; */
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.numeros div h2 {
+    padding: 10px;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.botoes {
+    /* background-color: #9c2c2c; */
+    height: 60px;
+    width: 500px;
+}
+
+.botoes button {
+    width: 90px;
+    height: 50px;
+    margin: 5px;
+    background-color: #e7e7e7;
+    color: #000000;
+    text-transform: uppercase;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.botoes button:hover {
+    background-color: #fab9f1;
+}
