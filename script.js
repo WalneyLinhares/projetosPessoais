@@ -1,6 +1,8 @@
 let horas = document.getElementById('horas');
 let minutos = document.getElementById('minutos');
 let segundos = document.getElementById('segundos');
+const horasdiv = document.getElementById('div-horas')
+const minutosdiv = document.getElementById('div-minutos')
 let countstate = false;
 
 
@@ -23,6 +25,14 @@ function spanAnimation(stateopaco = false) {
         for (let i = 0; i < spans.length; i += 1) {
             spans[i].style.opacity = "1";
         }
+    }
+}
+
+function tamanhoFontMediaQ(tamP, tamC) {
+    if (window.matchMedia("(max-width: 600px)").matches) {
+        segundos.style.fontSize = tamC;
+    } else {
+        segundos.style.fontSize = tamP;
     }
 }
 
@@ -53,6 +63,7 @@ document.getElementById("button-iniciar").addEventListener("click", function() {
         interval = setInterval(() => {
             if (totalsegundos <= 0 || interval <= 0) {
                 clearInterval(interval);
+                countstate = false;
                 return;
             }
 
@@ -65,6 +76,12 @@ document.getElementById("button-iniciar").addEventListener("click", function() {
             horas.innerText = String(h).padStart(2, "0");
             minutos.innerText = String(m).padStart(2, "0");
             segundos.innerText = String(s).padStart(2, "0");
+
+            if (totalsegundos <= 10) {
+                horasdiv.style.display = 'none';
+                minutosdiv.style.display = 'none';
+                tamanhoFontMediaQ('140px', '80px');
+            }
 
         }, 1000);
     }
@@ -102,6 +119,10 @@ document.getElementById("button-editar").addEventListener("click", function() {
     horas.contentEditable = "true";
     minutos.contentEditable = "true";
     segundos.contentEditable = "true";
+
+    horasdiv.style.display = "flex";
+    minutosdiv.style.display = "flex";
+    tamanhoFontMediaQ('80px', '50px');
 
     function validarEntrada(event, element, limite) {
         

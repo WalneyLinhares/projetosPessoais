@@ -30,30 +30,35 @@ header h1 {
 }
 
 .numeros {
+    /* background-color: #080000; */
     display: flex;
     justify-content: center;
     justify-items: center;
-    height: 50%;
-    margin-top: 10%;
+    height: 70%;
 }
 
 .numeros div {
     /* background-color: #9c2c2c; */
     text-transform: uppercase;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .numeros div h2 {
     padding: 10px;
     font-size: 80px;
     font-weight: bold;
+    transition: 1s;
 }
 
 .botoes {
     /* background-color: #9c2c2c; */
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
     width: 100%;
     gap: 15px;
 }
@@ -88,14 +93,19 @@ header h1 {
 
     .numeros {
         margin-top: 5%;
+        height: 60%;
     }
 
     .numeros div h2 {
         font-size: 50px;
     }
 
+    .botoes {
+        gap: 8px;
+    }
+
     .botoes button {
-        padding: 6px;
+        padding: 9px;
         height: 45px;
         font-size: 12px;
     }
